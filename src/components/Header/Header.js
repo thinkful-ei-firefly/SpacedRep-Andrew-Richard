@@ -68,7 +68,7 @@ class Header extends Component {
 
           <h1 className="logo">
             <Link to='/'>
-              Spaced repetition
+              Spaced Repetition
             </Link>
           </h1>
 

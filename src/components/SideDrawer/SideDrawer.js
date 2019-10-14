@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import components
-import DrawerToggleButton from '../DrawerToggleButton/DrawerToggleButton';
 // import context
 import UserContext from '../../contexts/UserContext';
 import MenuContext from '../../contexts/MenuContext';

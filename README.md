@@ -1,5 +1,16 @@
 # Spaced Repetition Capstone
 
+color choices
+
+header background: #3ACEC4
+58, 206, 196
+
+red: #CE3A44
+206, 58, 68
+
+green: #8ECE3A
+142, 206, 58
+
 ## Setup
 
 To setup the application

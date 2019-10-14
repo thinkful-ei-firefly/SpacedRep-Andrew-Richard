@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background: #F21323;
+    background: #3ACEC4;
     height: 56px;
     z-index: 50;
   }
@@ -21,9 +21,10 @@
   }
   
   .logo a{
-    color: #F2CD60;
+    color: darkslategrey;
     text-decoration: none;
     font-size: 1.5rem;
+    font-weight: bolder;
   }
   
   .spacer {
