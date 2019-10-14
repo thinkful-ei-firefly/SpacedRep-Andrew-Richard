@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { Input, Required, Label } from '../Form/Form'
 import AuthApiService from '../../services/auth-api-service'
 import Button from '../Button/Button'
-import './RegistrationForm.css'
 
 class RegistrationForm extends Component {
   static defaultProps = {
@@ -46,9 +45,11 @@ class RegistrationForm extends Component {
         <div role='alert'>
           {error && <p>{error}</p>}
         </div>
-        <div>
-          <Label htmlFor='registration-name-input'>
-            Enter your name<Required />
+        <div className="form-element">
+          <Label 
+            htmlFor='registration-name-input'>
+            Enter your name
+            <Required />
           </Label>
           <Input
             ref={this.firstInput}
@@ -57,7 +58,7 @@ class RegistrationForm extends Component {
             required
           />
         </div>
-        <div>
+        <div className="form-element">
           <Label htmlFor='registration-username-input'>
             Choose a username<Required />
           </Label>
@@ -67,7 +68,7 @@ class RegistrationForm extends Component {
             required
           />
         </div>
-        <div>
+        <div className="form-element">
           <Label htmlFor='registration-password-input'>
             Choose a password<Required />
           </Label>
@@ -78,12 +79,21 @@ class RegistrationForm extends Component {
             required
           />
         </div>
-        <footer>
-          <Button type='submit'>
-            Sign up
-          </Button>
-          {' '}
-          <Link to='/login'>Already have an account?</Link>
+        {/* why is there a footer inside this form? */}
+        <footer>   
+          <div className="form-element form-button">
+            <Button
+              className="button"
+              type='submit'>
+              Sign up
+            </Button>
+          </div>
+          <div className="form-element form-link">
+            <Link 
+              to='/login'>
+              Already have an account?
+            </Link>
+          </div>
         </footer>
       </form>
     )

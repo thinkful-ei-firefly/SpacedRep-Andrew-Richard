@@ -1,0 +1,34 @@
+
+.login {
+    margin: 90px 40px 0 40px;
+}
+
+.login h2 {
+    text-align: center;
+    font-size: 32px;
+    line-height: 36px;
+}
+
+.login form {
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.login .form-element {
+    padding: 4px 0;
+    font-size: 18px;
+}
+
+.login .form-button {
+    text-align: center;
+    margin: 20px 0 6px 0;
+}
+
+.login .button {
+    font-size: 24px;
+    padding: 5px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+

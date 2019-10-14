@@ -14,7 +14,6 @@ import SideDrawer from '../SideDrawer/SideDrawer';
 import BackDrop from '../BackDrop/BackDrop';
 import MenuContext from '../../contexts/MenuContext';
 // import css
-import './App.css'
 
 export default class App extends Component {
 
@@ -70,7 +69,7 @@ export default class App extends Component {
 
       </MenuContext.Provider>
 
-        <main style={ { marginTop: '56px' } }>
+        <main style={ { marginTop: '64px' } }>
           {hasError && (
             <p>There was an error! Oh no!</p>
           )}
