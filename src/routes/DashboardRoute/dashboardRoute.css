@@ -1,0 +1,59 @@
+
+.dashBoard {
+    margin: 50px 40px 100px 40px;
+}
+
+.dashBoard h2 {
+    text-align: left;
+    font-size: 32px;
+    line-height: 36px;
+}
+
+.dashBoard .button {
+    font-size: 24px;
+    padding: 5px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.dashBoard .subheader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.wordsList {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.wordsList p {
+    font-size: 16px;
+}
+
+.wordsList .correct,
+.wordsList .incorrect {
+    text-align: center;
+}
+
+.wordsList .words,
+.wordsList .correct,
+.wordsList .incorrect {
+    font-size: 14px;
+}
+
+@media (min-width: 350px) {
+    .wordList p {
+        font-size: 20px;
+    }
+
+    .wordsList .words,
+    .wordsList .correct,
+    .wordsList .incorrect {
+        font-size: 16px;
+}
+
+}

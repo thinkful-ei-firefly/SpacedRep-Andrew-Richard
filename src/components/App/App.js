@@ -19,55 +19,27 @@ export default class App extends Component {
 
   static contextType = MenuContext;
 
-  state = { 
-    hasError: false,
-    sideDrawerIsOpen: false,
-    drawerClass: 'side-drawer',
-   }
+  state = { hasError: false, sideDrawerIsOpen: false }
 
   static getDerivedStateFromError(error) {
     console.error(error)
     return { hasError: true }
   }
-
-  handleOpenSideDrawer = () => {
-    this.setState({
-      sideDrawerIsOpen: true,
-      drawerClass: 'side-drawer is-open'
-    })
-  }
-
-  handleCloseSideDrawer = () => {
-    this.setState({
-      sideDrawerIsOpen: false,
-      drawerClass: 'side-drawer'
-    })
-  }
-
+  
   render() {
 
     let backDrop;
     if(this.state.sideDrawerIsOpen) {
-      backDrop = <BackDrop click = { this.handleCloseSideDrawer } />
+      backDrop = <BackDrop click = { this.context.close } />
     }
 
     const { hasError } = this.state
     return (
       <div className='App' style={ { height: '100%' }}>
-        
-        <MenuContext.Provider
-          value = { {
-            sideDrawerIsOpen: this.state.sideDrawerIsOpen,
-            drawerClass: this.state.drawerClass,
-            open: this.handleOpenSideDrawer,
-            close: this.handleCloseSideDrawer
-          }}>
 
           <Header />
           <SideDrawer />
           { backDrop }
-
-      </MenuContext.Provider>
 
         <main style={ { marginTop: '64px' } }>
           {hasError && (

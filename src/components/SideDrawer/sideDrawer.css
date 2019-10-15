@@ -25,11 +25,11 @@
     margin: 2rem 0 0 0;
 }
 
-.side-drawer li {
+.side-drawer li, .side-drawer span {
     margin: 0.7rem 0 0.7rem 2rem;
 }
 
-.side-drawer a {
+.side-drawer .menu {
     color: white;
     text-decoration: none;
     font-size: 1.4rem;

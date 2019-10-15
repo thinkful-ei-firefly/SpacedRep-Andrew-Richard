@@ -13,8 +13,8 @@ class SideDrawer extends React.Component {
     static contextType = UserContext;
     static contextType = MenuContext;
 
-    handleLinkClicked = () => {
-        this.context.close();
+    handleLogoutClick = () => {
+      this.context.processLogout()
     }
 
     renderLogoutLink() {
@@ -22,13 +22,22 @@ class SideDrawer extends React.Component {
           <div className="sidebar-navigation-items">
               <ul>
                 <li>
-                  <span>
-                    {this.context.user.name}
+                  <span className="menu">
+                    Add User Name
+                    {/* {this.context.user.name} */}
                   </span>
                 </li>
                 <li>
                   <Link
-                    onClick={this.handleLogoutClick}
+                    to='/'
+                    className="menu"
+                    onClick = { this.context.handleCloseSideDrawer }>
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    onClick={ this.context.handleCloseSideDrawer }
                     to='/login'
                     className="menu">
                     Logout
@@ -47,7 +56,7 @@ class SideDrawer extends React.Component {
                 <Link 
                   to='/login'
                   className="menu"
-                  onClick = { this.handleLinkClicked }>
+                  onClick = { this.context.handleCloseSideDrawer }>
                   Login
                 </Link>
               </li>
@@ -55,7 +64,7 @@ class SideDrawer extends React.Component {
                 <Link 
                   to='/register'
                   className="menu"
-                  onClick = { this.handleLinkClicked }>
+                  onClick = { this.context.handleCloseSideDrawer }>
                   Sign up
                 </Link>
               </li> 

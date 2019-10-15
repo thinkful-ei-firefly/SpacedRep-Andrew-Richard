@@ -10,8 +10,8 @@ class DrawerToggleButton extends React.Component {
     handleClick = e => {
         e.preventDefault()
         this.context.sideDrawerIsOpen
-        ? this.context.close()
-        : this.context.open()
+        ? this.context.handleCloseSideDrawer()
+        : this.context.handleOpenSideDrawer()
     }
 
     render() {
