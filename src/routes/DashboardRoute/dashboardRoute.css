@@ -14,6 +14,8 @@
     padding: 5px;
     background-color: white;
     border: 1px solid black;
+    text-decoration: none;
+    color: black;
 }
 
 .dashBoard .subheader {
@@ -23,6 +25,11 @@
     align-items: center;
 }
 
+.dashBoard .totalScore {
+    text-align: center;
+    margin: 0;
+}
+
 .wordsList {
     display: flex;
     flex-direction: row;
@@ -30,7 +37,10 @@
     align-items: flex-start;
 }
 
-.wordsList p {
+.dashBoard .totalScore,
+.words p,
+.corrects p,
+.incorrects p {
     font-size: 16px;
 }
 
@@ -40,19 +50,22 @@
 }
 
 .wordsList .words,
-.wordsList .correct,
-.wordsList .incorrect {
+.wordsList .corrects,
+.wordsList .incorrects {
     font-size: 14px;
 }
 
 @media (min-width: 350px) {
-    .wordList p {
+    .dashBoard .totalScore,
+    .words p,
+    .corrects p,
+    .incorrects p {
         font-size: 20px;
-    }
+}
 
     .wordsList .words,
-    .wordsList .correct,
-    .wordsList .incorrect {
+    .wordsList .corrects,
+    .wordsList .incorrects {
         font-size: 16px;
 }
 

@@ -8,7 +8,8 @@ const LanguageContext = React.createContext({
     setWords: () => {},
     createWordList: () => {},
     createCorrectList: () => {},
-    createIncorrectList: () => {}
+    createIncorrectList: () => {},
+    calcTotalScore: () => {}
 })
 
 export default LanguageContext
@@ -60,6 +61,13 @@ export class LanguageProvider extends React.Component {
                 )
     }
 
+    calcTotalScore = () => {
+        return this.state.words
+            .reduce(function(acc, word) {
+                return acc + word.correct_count
+            }, 0)
+    }
+
     render() {
         const value = {
             language: this.state.language,
@@ -68,7 +76,8 @@ export class LanguageProvider extends React.Component {
             setWords: this.setWords,
             createWordList: this.createWordlist,
             createCorrectList: this.createCorrectList,
-            createIncorrectList: this.createIncorrectList
+            createIncorrectList: this.createIncorrectList,
+            calcTotalScore: this.calcTotalScore
         }
 
         return(

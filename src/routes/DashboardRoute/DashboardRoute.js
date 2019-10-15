@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
 // import components
 import WordsList from '../../components/WordsList/WordsList'
-import Button from '../../components/Button/Button'
 // import context
 import LanguageContext from '../../contexts/LanguageContext'
 // import services
@@ -38,11 +38,13 @@ class DashboardRoute extends Component {
         <section className="dashBoard">
           <div className="subheader">
             <h2 className="language">{ this.context.language.name }</h2>
-            <Button
+            <Link
+              to='/learn'
               className="button">
               Start
-            </Button>
+            </Link>
           </div>
+          <p className="totalScore">Total Score: { this.context.calcTotalScore() }</p>
           <WordsList />
         </section>
       );
