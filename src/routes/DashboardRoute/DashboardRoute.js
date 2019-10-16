@@ -14,7 +14,7 @@ class DashboardRoute extends Component {
   static contextType = LanguageContext;
   
   componentDidMount() {
-    console.log('mounted')
+    console.log('mounted dashboard')
     LanguageApiService.getLanguage()
       .then( results => {
           this.context.setLanguage(results.language)
