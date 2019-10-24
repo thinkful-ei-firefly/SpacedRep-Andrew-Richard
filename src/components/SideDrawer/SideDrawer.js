@@ -14,6 +14,7 @@ class SideDrawer extends React.Component {
     static contextType = MenuContext;
 
     handleLogoutClick = () => {
+      this.context.handleCloseSideDrawer()
       this.context.processLogout()
     }
 

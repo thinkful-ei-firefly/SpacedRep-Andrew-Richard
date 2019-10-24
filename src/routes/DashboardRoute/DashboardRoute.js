@@ -14,14 +14,12 @@ class DashboardRoute extends Component {
   static contextType = LanguageContext;
   
   componentDidMount() {
-    console.log('mounted dashboard')
     LanguageApiService.getLanguage()
       .then( results => {
           this.context.setLanguage(results.language)
           this.context.setWords(results.words)
       })
       .then(() => {
-        console.log(this.context.words)
         this.setState({ loading: false })
       })
   }

@@ -63,3 +63,11 @@
     padding: 20px;
     font-size: 24px;
 }
+
+.learning .response{
+    text-align: center;
+}
+
+.learning .response p{
+    font-size: 24px;
+}

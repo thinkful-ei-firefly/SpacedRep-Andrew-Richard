@@ -29,7 +29,7 @@ export default class App extends Component {
   render() {
 
     let backDrop;
-    if(this.state.sideDrawerIsOpen) {
+    if(this.context.sideDrawerIsOpen) {
       backDrop = <BackDrop click = { this.context.close } />
     }
 

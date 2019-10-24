@@ -16,7 +16,7 @@ const LanguageApiService = {
             )
     },
     
-    getHead(nextId) {
+    getHead() {
         return fetch(`${config.API_ENDPOINT}/language/head`, {
             method: 'GET',
             headers: {
@@ -27,6 +27,22 @@ const LanguageApiService = {
                 (!res.ok)
                 ? res.json().then(e => Promise.reject(e))
                 : res.json()
+            )
+    },
+
+    guess(guess) {
+        return fetch(`${config.API_ENDPOINT}/language/guess`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `bearer ${TokenService.getAuthToken()}`
+            },
+            body: JSON.stringify(guess)
+        })
+            .then(res =>
+                (!res.ok)
+                    ? res.json().then(e => Promise.reject(e))
+                    : res.json()
             )
     }
 }
