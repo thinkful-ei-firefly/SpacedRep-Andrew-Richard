@@ -5,7 +5,7 @@ Username: demo
 Password: Passw0rd#
 
 ## Registration page
-<img src="./src/images/signUp.png" alt="registration page" width="400px">
+<img src="./images/signUp.png" alt="registration page" width="400px">
 
 ### User story:
 
@@ -20,7 +20,7 @@ As a first time user:
 - If any of my information is incorrect, I'm given an appropriate error message and the option to correct my information.
 
 ## Login page
-<img src="./src/images/login.png" alt="login page" width="400px">
+<img src="./images/login.png" alt="login page" width="400px">
 
 ### User story:
 
@@ -45,7 +45,7 @@ As a logged in user who is starting a new session:
 - The application remembers that I'm logged in and doesn't redirect me to the registration page.
 
 ## Dashboard page
-<img src="./src/images/home.png" alt="dashboard" width="400px">
+<img src="./images/home.png" alt="dashboard" width="400px">
 
 ### User story:
 
@@ -63,11 +63,11 @@ When viewing the dashboard as a logged in user:
 - I'm shown the total score for guessing words correctly
 
 ## Learning page
-<img src="./src/images/question.png" alt="learning question page" width="400px">
+<img src="./images/question.png" alt="learning question page" width="400px">
 
-<img src="./src/images/correct.png" alt="learning correct page" width="400px">
+<img src="./images/correct.png" alt="learning correct page" width="400px">
 
-<img src="./src/images/incorrect.png" alt="learning incorrect page" width="400px">
+<img src="./images/incorrect.png" alt="learning incorrect page" width="400px">
 
 ### User story:
 
