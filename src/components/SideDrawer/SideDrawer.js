@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 // import context
 import UserContext from '../../contexts/UserContext';
-import MenuContext from '../../contexts/MenuContext';
 // import service functions
 import TokenService from '../../services/token-service';
 // import css
@@ -11,7 +10,6 @@ import './sideDrawer.css'
 class SideDrawer extends React.Component {
 
     static contextType = UserContext;
-    static contextType = MenuContext;
 
     handleLogoutClick = () => {
       this.context.handleCloseSideDrawer()
@@ -24,8 +22,7 @@ class SideDrawer extends React.Component {
               <ul>
                 <li>
                   <span className="menu">
-                    Add User Name
-                    {/* {this.context.user.name} */}
+                    { this.context.user.name }
                   </span>
                 </li>
                 <li>
@@ -38,7 +35,7 @@ class SideDrawer extends React.Component {
                 </li>
                 <li>
                   <Link
-                    onClick={ this.context.handleCloseSideDrawer }
+                    onClick={ this.handleLogoutClick }
                     to='/login'
                     className="menu">
                     Logout

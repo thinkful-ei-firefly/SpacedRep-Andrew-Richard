@@ -6,11 +6,18 @@ import IdleService from '../services/idle-service'
 const UserContext = React.createContext({
   user: {},
   error: null,
+
+  sideDrawerIsOpen: false,
+  drawerClass: '',
+
   setError: () => {},
   clearError: () => {},
   setUser: () => {},
   processLogin: () => {},
   processLogout: () => {},
+
+  handleOpenSideDrawer: () => {},
+  handleCloseSideDrawer: () => {}
 })
 
 export default UserContext
@@ -18,7 +25,13 @@ export default UserContext
 export class UserProvider extends Component {
   constructor(props) {
     super(props)
-    const state = { user: {}, error: null }
+    const state = { 
+      user: {}, 
+      error: null,
+
+      sideDrawerIsOpen: false,
+      drawerClass: 'side-drawer'
+    }
 
     const jwtPayload = TokenService.parseAuthToken()
 
@@ -101,15 +114,36 @@ export class UserProvider extends Component {
       })
   }
 
+  handleOpenSideDrawer = () => {
+    this.setState({
+      sideDrawerIsOpen: true,
+      drawerClass: 'side-drawer is-open'
+    })
+  }
+
+  handleCloseSideDrawer = () => {
+    this.setState({
+      sideDrawerIsOpen: false,
+      drawerClass: 'side-drawer'
+    })
+  }
+
   render() {
     const value = {
       user: this.state.user,
       error: this.state.error,
+
+      sideDrawerIsOpen: this.state.sideDrawerIsOpen,
+      drawerClass: this.state.drawerClass,
+
       setError: this.setError,
       clearError: this.clearError,
       setUser: this.setUser,
       processLogin: this.processLogin,
       processLogout: this.processLogout,
+
+      handleOpenSideDrawer: this.handleOpenSideDrawer,
+      handleCloseSideDrawer: this.handleCloseSideDrawer
     }
     return (
       <UserContext.Provider value={value}>

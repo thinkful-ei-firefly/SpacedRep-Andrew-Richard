@@ -1,6 +1,12 @@
-# Spaced Repetition Capstone
+# Spaced Repetition - Learn Italian
+
+## demo account
+Username: demo
+Password: Passw0rd#
 
 ## Registration page
+<img src="./src/images/signUp.png" alt="registration page" width="400px">
+
 ### User story:
 
 As a prospective user, I can register an account so that I can login and use the application.
@@ -14,6 +20,8 @@ As a first time user:
 - If any of my information is incorrect, I'm given an appropriate error message and the option to correct my information.
 
 ## Login page
+<img src="./src/images/login.png" alt="login page" width="400px">
+
 ### User story:
 
 As a registered user, I can login to the application so that I can begin learning.
@@ -37,6 +45,8 @@ As a logged in user who is starting a new session:
 - The application remembers that I'm logged in and doesn't redirect me to the registration page.
 
 ## Dashboard page
+<img src="./src/images/home.png" alt="dashboard" width="400px">
+
 ### User story:
 
 As a logged in user, I'm directed to a dashboard where I can see my progress learning my language.
@@ -53,6 +63,12 @@ When viewing the dashboard as a logged in user:
 - I'm shown the total score for guessing words correctly
 
 ## Learning page
+<img src="./src/images/question.png" alt="learning question page" width="400px">
+
+<img src="./src/images/correct.png" alt="learning correct page" width="400px">
+
+<img src="./src/images/incorrect.png" alt="learning incorrect page" width="400px">
+
 ### User story:
 
 As a logged in user, I can learn words using spaced repetition.
@@ -94,7 +110,8 @@ When viewing feedback for an answer on the learning page as a logged in user:
 - I'm presented with a button that I can click to learn another word
 - When clicking on the button I see the next word to learn
 
-
+## Side Bar Navigation
+<img src="./src/images/sideBarNav.png" alt="side bar navigation" width="400px">
 
 ## Color choices
 
@@ -109,50 +126,3 @@ When viewing feedback for an answer on the learning page as a logged in user:
 - green
     #8ECE3A
     142, 206, 58
-
-## Setup
-
-To setup the application
-
-1. Fork and clone the project to your machine
-2. `npm install`. This will also install the application *Cypress.io* for running browser integration tests
-
-The project expects you have the Spaced repetition API project setup and running on http://localhost:8000.
-
-Find instructions to setup the API here https://github.com/Thinkful-Ed/spaced-repetition-api.
-
-## Running project
-
-This is a `create-react-app` project so `npm start` will start the project in development mode with hot reloading by default.
-
-## Running the tests
-
-This project uses [Cypress IO](https://docs.cypress.io) for integration testing using the Chrome browser.
-
-Cypress has the following expectations:
-
-- You have cypress installed (this is a devDependency of the project)
-- You have your application running at http://localhost:3000.
-  - You can change the address of this expectation in the `./cypress.json` file.
-- Your `./src/config.js` is using http://localhost:8000/api as the `API_ENDPOINT`
-
-To start the tests run the command:
-
-```bash
-npm run cypress:open
-```
-
-On the first run of this command, the cypress application will verify its install. Any other runs after this, the verification will be skipped.
-
-The command will open up the Cypress application which reads tests from the `./cypress/integration/` directory. You can then run individual tests by clicking on the file names or run all tests by clicking the "run all tests" button in the cypress GUI.
-
-Tests will assert against your running localhost client application.
-
-You can also start all of the tests in the command line only (not using the GUI) by running the command:
-
-```bash
-npm run cypress:run
-```
-
-This will save video recordings of the test runs in the directory `./cypress/videos/`.
-

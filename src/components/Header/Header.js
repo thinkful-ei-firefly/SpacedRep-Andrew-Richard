@@ -18,9 +18,16 @@ class Header extends Component {
           <ul>
             <li>
               <span>
-                {this.context.user.name}
+                { this.context.user.name }
               </span>
             </li>
+            <li>
+                <Link
+                  to='/'
+                  className="menu">
+                  Home
+                </Link>
+              </li>
             <li>
               <Link
                 onClick={this.handleLogoutClick}
