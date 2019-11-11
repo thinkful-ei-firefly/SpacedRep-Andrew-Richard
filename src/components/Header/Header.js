@@ -22,6 +22,13 @@ class Header extends Component {
               </span>
             </li>
             <li>
+                <Link
+                  to='/'
+                  className="menu">
+                  Home
+                </Link>
+              </li>
+            <li>
               <Link
                 onClick={this.handleLogoutClick}
                 to='/login'

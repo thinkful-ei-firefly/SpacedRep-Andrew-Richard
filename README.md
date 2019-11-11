@@ -1,5 +1,7 @@
 # Spaced Repetition Capstone
-
+## demo account
+Username: demo
+Password: Passw0rd#
 ## Registration page
 ### User story:
 

@@ -30,7 +30,7 @@ export default class App extends Component {
 
     let backDrop;
     if(this.context.sideDrawerIsOpen) {
-      backDrop = <BackDrop click = { this.context.close } />
+      backDrop = <BackDrop click = { this.context.handleCloseSideDrawer } />
     }
 
     const { hasError } = this.state
