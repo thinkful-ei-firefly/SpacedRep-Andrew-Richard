@@ -40,10 +40,10 @@ class RegistrationForm extends Component {
     const { error } = this.state
     return (
       <form
-        onSubmit={this.handleSubmit}
+        onSubmit={ this.handleSubmit }
       >
         <div role='alert'>
-          {error && <p>{error}</p>}
+          { error && <p className="error">{ error }</p> }
         </div>
         <div className="form-element">
           <Label 
@@ -52,7 +52,7 @@ class RegistrationForm extends Component {
             <Required />
           </Label>
           <Input
-            ref={this.firstInput}
+            ref={ this.firstInput }
             id='registration-name-input'
             name='name'
             required

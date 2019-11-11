@@ -31,4 +31,7 @@
     border: 1px solid black;
 }
 
+.login .error {
+    color: red;
+}
 

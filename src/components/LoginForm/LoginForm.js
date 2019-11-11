@@ -45,10 +45,10 @@ class LoginForm extends Component {
     return (
       <form
         className='LoginForm'
-        onSubmit={this.handleSubmit}
+        onSubmit={ this.handleSubmit }
       >
         <div role='alert'>
-          {error && <p>{error}</p>}
+          { error && <p className='error'>{error}</p> }
         </div>
         <div className="form-element">
           <Label 
