@@ -4,6 +4,12 @@
 Username: demo
 Password: Passw0rd#
 
+## Live
+https://spaced-repetition.gatesjrichard.now.sh/
+
+## Server 
+https://github.com/thinkful-ei-firefly/SpacedRep-Server-Richard
+
 ## Registration page
 <img src="./images/signUp.png" alt="registration page" width="400px">
 
