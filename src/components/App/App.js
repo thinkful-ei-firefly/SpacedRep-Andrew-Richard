@@ -12,12 +12,12 @@ import NotFoundRoute from '../../routes/NotFoundRoute/NotFoundRoute'
 import Header from '../Header/Header'
 import SideDrawer from '../SideDrawer/SideDrawer';
 import BackDrop from '../BackDrop/BackDrop';
-import MenuContext from '../../contexts/MenuContext';
+import UserContext from '../../contexts/UserContext';
 // import css
 
 export default class App extends Component {
 
-  static contextType = MenuContext;
+  static contextType = UserContext;
 
   state = { hasError: false, sideDrawerIsOpen: false }
 

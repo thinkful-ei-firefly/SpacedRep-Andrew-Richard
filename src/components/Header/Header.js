@@ -18,7 +18,7 @@ class Header extends Component {
           <ul>
             <li>
               <span>
-                {this.context.user.name}
+                { this.context.user.name }
               </span>
             </li>
             <li>

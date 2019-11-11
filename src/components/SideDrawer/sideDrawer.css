@@ -33,7 +33,9 @@
     color: white;
     text-decoration: none;
     font-size: 1.4rem;
+    margin: 0;
 }
+
 
 .side-drawer a:hover,
 .side-drawer a:active {
