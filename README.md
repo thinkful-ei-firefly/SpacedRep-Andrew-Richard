@@ -111,7 +111,7 @@ When viewing feedback for an answer on the learning page as a logged in user:
 - When clicking on the button I see the next word to learn
 
 ## Side Bar Navigation
-<img src="./src/images/sideBarNav.png" alt="side bar navigation" width="400px">
+<img src="./images/sideBarNav.png" alt="side bar navigation" width="400px">
 
 ## Color choices
 
